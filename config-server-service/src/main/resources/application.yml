@@ -1,0 +1,22 @@
+# run local
+spring:
+  application:
+    name: config-server-service
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+server:
+  port: 9191
+logging:
+  level:
+    config: TRACE
+    org.springframework.web: TRACE
+#spring.profiles.active=git
+#spring.cloud.config.server.git.uri=https://github.com/TrongPhungF/shopee-config-server-service
+#spring.cloud.config.server.git.clone-on-start=true
+#spring.cloud.config.server.git.default-label=main
+##encrypt.key=eazybytes

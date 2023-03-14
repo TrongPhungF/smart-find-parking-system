@@ -1,0 +1,14 @@
+
+spring:
+  config:
+    import: optional:configserver:${HOST_NAME}:${CONFIG_SERVER_PORT}
+  application:
+    name: ${APPLICATION_NAME}
+
+logging:
+  level:
+    config: ${LOG_LEVEL}
+    web: ${LOG_LEVEL}
+    org.springframework.web: ${LOG_LEVEL}
+    org.springframework.cloud.netflix.eureka: ${LOG_LEVEL}
+    org.springframework.cloud.netflix.eureka.server: ${LOG_LEVEL}

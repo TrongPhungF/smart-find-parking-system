@@ -1,0 +1,41 @@
+spring:
+  config:
+    import: optional:configserver:${HOST_NAME}:${CONFIG_SERVER_PORT}
+  application:
+    name: ${APPLICATION_NAME}
+  data:
+    dynamodb:
+      entity2ddl:
+        auto: ${DYNAMODB_ENTITY2DDL_AUTO}
+        readCapacity: 10
+        writeCapacity: 1
+# AWS properties
+aws:
+  access-key: ${AWS_ACCESS_KEY}
+  secret-key: ${AWS_SECRET_KEY}
+  region: ${AWS_REGION}
+  endpoint: ${AWS_ENDPOINT}
+
+jwt:
+  secret: BvPHGM8C0ia4uOuxxqPD5DTbWC9F9TWvPStp3pb7ARo0oK2mJ3pd3YG4lxA9i8bj6OTbadwezxgeEByY
+  expiration: 86400
+
+#keycloak:
+#  auth-server-url: ${KEYCLOAK_AUTH_SERVER_URL}:${KEYCLOAK_PORT}
+#  #auth-server-url: http://localhost:8181
+#  realm: ${KEYCLOAK_REALM}
+#  resource: ${KEYCLOAK_RESOURCE}
+#  admin-user: ${KEYCLOAK_ADMIN_USER}
+#  admin-password: ${KEYCLOAK_ADMIN_PASSWORD}
+#  credentials:
+#      secret: ${KEYCLOAK_CREDENTIALS_SECRET}
+#  bearer-only: true
+#  public-client: true
+#  ssl-required: external
+
+logging:
+  level:
+    config: ${LOG_LEVEL}
+    web: ${LOG_LEVEL}
+    org.springframework.web: ${LOG_LEVEL}
+    org.apache.http.wire: ${LOG_LEVEL}
