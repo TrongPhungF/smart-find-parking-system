@@ -270,3 +270,19 @@ nbdist/
 api-gateway-service/.mvn/wrapper/maven-wrapper.properties
 
 user-service/.mvn/wrapper/maven-wrapper.properties
+
+api-gateway-service/mvnw
+
+api-gateway-service/mvnw.cmd
+
+fe-service/.mvn/wrapper/maven-wrapper.properties
+
+fe-service/mvnw.cmd
+
+management-service/mvnw
+
+management-service/mvnw.cmd
+
+user-service/mvnw
+
+user-service/mvnw.cmd
